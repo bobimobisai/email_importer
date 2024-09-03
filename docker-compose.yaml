@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: base
+      POSTGRES_PASSWORD: em90ai12lkTGssa301!-034
+      POSTGRES_DB: email_importer
+    ports:
+      - "8489:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:
